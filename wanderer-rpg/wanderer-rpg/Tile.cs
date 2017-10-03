@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GreenFox;
+using System.IO;
 
 
 namespace RPGGame
@@ -24,36 +25,43 @@ namespace RPGGame
                 }
             }
             foxDraw.AddImage("./Assets/hero-down.png", 50, 50);
-           
-            foxDraw.AddImage("./Assets/wall.png", 200, 50);
-            foxDraw.AddImage("./Assets/wall.png", 200, 100);
-            foxDraw.AddImage("./Assets/wall.png", 200, 150);
-            foxDraw.AddImage("./Assets/wall.png", 150, 150);
-            foxDraw.AddImage("./Assets/wall.png", 100, 150);
+            // string path = ("./Assets/map.txt");
+            // ReadFile(path);
 
-            foxDraw.AddImage("./Assets/wall.png", 300, 50);
-            foxDraw.AddImage("./Assets/wall.png", 300, 100);
-            foxDraw.AddImage("./Assets/wall.png", 300, 150);
-            foxDraw.AddImage("./Assets/wall.png", 300, 200);
-            foxDraw.AddImage("./Assets/wall.png", 300, 250);
-            foxDraw.AddImage("./Assets/wall.png", 350, 250);
-            foxDraw.AddImage("./Assets/wall.png", 400, 250);
-            foxDraw.AddImage("./Assets/wall.png", 450, 250);
-            foxDraw.AddImage("./Assets/wall.png", 450, 300);
-            foxDraw.AddImage("./Assets/wall.png", 450, 350);
-            foxDraw.AddImage("./Assets/wall.png", 450, 400);
-            foxDraw.AddImage("./Assets/wall.png", 450, 450);
+            StreamReader myReader = new StreamReader(@"\\Mac\Home\Documents\greenfox\evelinhlacsok-RPG\wanderer-rpg\wanderer-rpg\Assets\map.txt");
+            string line = "";
+            while (line != null)
+            {
+                line = myReader.ReadLines();
+                if (line != null)
+                {
+                    string[] letters = line.Split(' ');
+                    foreach (var letter in letters)
+                    {
+                        if (letter == "f")
+                        {
+                            foxDraw.AddImage("./Assets/floor.png", x, y);
+                        }
+                        else
+                        {
+                            foxDraw.AddImage("./Assets/wall.png", x, y);
+                        }
 
-            foxDraw.AddImage("./Assets/wall.png", 400, 100);
-            foxDraw.AddImage("./Assets/wall.png", 450, 100);
-            foxDraw.AddImage("./Assets/wall.png", 400, 150);
-            foxDraw.AddImage("./Assets/wall.png", 450, 150);
+                    }
+                }
+            }
 
-            foxDraw.AddImage("./Assets/wall.png", 50, 250);
-            foxDraw.AddImage("./Assets/wall.png", 100, 250);
-            foxDraw.AddImage("./Assets/wall.png", 150, 250);
-            foxDraw.AddImage("./Assets/wall.png", 200, 250);
+
+            //foxDraw.AddImage("./Assets/wall.png", 200, 50);
+            //foxDraw.AddImage("./Assets/wall.png", 200, 100);
+            //foxDraw.AddImage("./Assets/wall.png", 200, 150);
+            //foxDraw.AddImage("./Assets/wall.png", 150, 150);
+            //foxDraw.AddImage("./Assets/wall.png", 100, 150);
             
         }
+        //static void ReadFile(string path)
+        //{
+        //    File.ReadAllText(path);
+        //}
     }
 }
