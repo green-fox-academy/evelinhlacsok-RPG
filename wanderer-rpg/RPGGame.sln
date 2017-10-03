@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGGame", "wanderer-rpg\RPGGame.csproj", "{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFA29EF0-7ED6-4044-B944-1E89B550D309}
+	EndGlobalSection
+EndGlobal
