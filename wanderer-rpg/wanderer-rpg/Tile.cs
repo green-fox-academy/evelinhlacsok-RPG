@@ -49,7 +49,6 @@ namespace RPGGame
                     }
                 }
             }
-            foxDraw.AddImage("./Assets/hero-down.png", 50, 50);
         }
     }
 }
