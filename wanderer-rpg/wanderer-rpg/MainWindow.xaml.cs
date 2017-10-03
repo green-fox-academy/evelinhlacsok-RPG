@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using GreenFox;
 using System.Windows.Media;
+using System.Windows.Input;
 
 namespace RPGGame
 {
@@ -13,22 +14,23 @@ namespace RPGGame
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
-           // foxDraw.AddImage("./Assets/floor.png", 0, 0);
             DrawTile();
         }
         public void DrawTile()
         {
             var foxDraw = new FoxDraw(canvas);
-            int x = 50;
-            int y = 50;
-            for (int i = 0; i <= 10; i++)
+            int x = 0;
+            int y = 0;
+            for (int i = 1; i <= 10; i++)
             {
-                for (int j = 0; j <= 10; j++)
+                y = i * 50;
+                for (int j = 1; j <= 10; j++)
                 {
-                    foxDraw.AddImage("./Assets/floor.png", 0, 0);
+                    x = j * 50;
+                    foxDraw.AddImage("./Assets/floor.png", x, y);
+                    
                 }
             }
-
         }
         private void WindowKeyDown(object sender, KeyEventArgs e)
         {
