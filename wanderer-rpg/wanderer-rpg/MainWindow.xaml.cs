@@ -34,12 +34,12 @@ namespace RPGGame
 
             if (e.Key == Key.Down)
             {
-                Console.WriteLine("Go down!");
+                Hero.MoveDown(foxDraw);
             }
 
             if (e.Key == Key.Up)
             {
-                Console.WriteLine("Go up!");
+                Hero.MoveUp(foxDraw);
             }
         }
     }
