@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CC689F3D-8892-4F12-A4C2-6981CF4ABF64}</ProjectGuid>
+    <ProjectGuid>{2E24D101-4565-4EC2-AF47-506CE927D355}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>wanderer_rpg</RootNamespace>
-    <AssemblyName>wanderer-rpg</AssemblyName>
+    <RootNamespace>Tile</RootNamespace>
+    <AssemblyName>Tile</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,7 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Tile.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,7 +62,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FoxDraw.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -94,18 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\boss.png" />
-    <Resource Include="Assets\hero-down.png" />
-    <Resource Include="Assets\hero-left.png" />
-    <Resource Include="Assets\hero-right.png" />
-    <Resource Include="Assets\hero-up.png" />
-    <Resource Include="Assets\skeleton.png" />
-    <Resource Include="Assets\wall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\floor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
