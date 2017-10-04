@@ -9,22 +9,13 @@ using System.IO;
 
 namespace RPGGame
 {
-    class Tile
+    class Map
     {
-        public static void DrawTile(FoxDraw foxDraw)
+        public static void DrawMap(FoxDraw foxDraw)
         {
             int x = 0;
             int y = 0;
-            //for (int i = 1; i <= 10; i++)
-            //{
-            //    y = i * 50;
-            //    for (int j = 1; j <= 10; j++)
-            //    {
-            //        x = j * 50;
-            //        foxDraw.AddImage("./Assets/floor.png", x, y);
-            //    }
-            // }
-
+            
             StreamReader myReader = new StreamReader(@"\\Mac\Home\Documents\greenfox\evelinhlacsok-RPG\wanderer-rpg\wanderer-rpg\Assets\map.txt");
             string line = "";
             while (line != null)

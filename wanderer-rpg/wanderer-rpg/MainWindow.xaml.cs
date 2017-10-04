@@ -10,18 +10,21 @@ namespace RPGGame
 {
     public partial class MainWindow : Window
     {
+        FoxDraw foxDraw;
+        Map map;
+
         public MainWindow()
         {
             InitializeComponent();
-            var foxDraw = new FoxDraw(canvas);
-            Tile.DrawTile(foxDraw);
+            foxDraw = new FoxDraw(canvas);
+            Map.DrawMap(foxDraw);
+            map = new Map();
             Hero.SetHero(foxDraw);
-           //Hero.MoveLeft(foxDraw);
         }
         
-        public void WindowKeyDown(object sender, KeyEventArgs e)
+        private void WindowKeyDown(object sender, KeyEventArgs e)
         {
-            var foxDraw = new FoxDraw(canvas);
+            Map.DrawMap(foxDraw);
             if (e.Key == Key.Left)
             {
                 Hero.MoveLeft(foxDraw);

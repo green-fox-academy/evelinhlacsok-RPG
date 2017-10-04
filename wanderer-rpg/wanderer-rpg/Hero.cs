@@ -22,25 +22,26 @@ namespace RPGGame
             Hero.foxDraw = foxDraw;
             foxDraw.AddImage(pathherodown, 50, 50);
         }
+       
         public static void MoveLeft(FoxDraw foxDraw)
         {
-            foxDraw.AddImage(pathheroleft, XCoord - 50, YCoord);
             XCoord -= 50;
+            foxDraw.AddImage(pathheroleft, XCoord, YCoord);
         }
         public static void MoveRight(FoxDraw foxDraw)
         {
-            foxDraw.AddImage(pathheroright, XCoord + 50, YCoord);
             XCoord += 50;
+            foxDraw.AddImage(pathheroright, XCoord, YCoord);
         }
         public static void MoveUp(FoxDraw foxDraw)
         {
-            foxDraw.AddImage(patheroup, XCoord, YCoord - 50);
             YCoord -= 50;
+            foxDraw.AddImage(patheroup, XCoord, YCoord);
         }
         public static void MoveDown(FoxDraw foxDraw)
         {
-            foxDraw.AddImage(pathherodown, XCoord, YCoord + 50);
             YCoord += 50;
+            foxDraw.AddImage(pathherodown, XCoord, YCoord);
         }
 
     }
