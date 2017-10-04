@@ -16,11 +16,17 @@ namespace RPGGame
         public static FoxDraw foxDraw;
         public static int XCoord = 50;
         public static int YCoord = 50;
+        Map map = new Map();
 
         public static void SetHero(FoxDraw foxDraw)
         {
             Hero.foxDraw = foxDraw;
             foxDraw.AddImage(pathherodown, 50, 50);
+        }
+
+        public void TryToMove(FoxDraw foxDraw)
+        {
+
         }
 
         public static void MoveLeft(FoxDraw foxDraw)

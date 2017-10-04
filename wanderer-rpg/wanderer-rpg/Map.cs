@@ -40,11 +40,11 @@ namespace RPGGame
                         if (letter == "w")
                         {
                             foxDraw.AddImage("./Assets/wall.png", x, y);
-                            matrix[x2, y2] = 1;
+                            matrix[x2 - 1, y2 - 1] = 1;
                         }
                         else
                         {
-                          //  matrix[x/50, y/50] = 0;
+                            matrix[x/50 - 1, y/50 - 1] = 0;
                             foxDraw.AddImage("./Assets/floor.png", x, y);
                         }
                     }

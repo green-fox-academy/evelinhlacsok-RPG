@@ -32,6 +32,7 @@ namespace RPGGame
 
             if (e.Key == Key.Right)
             {
+                
                 Hero.MoveRight(foxDraw);
             }
 
