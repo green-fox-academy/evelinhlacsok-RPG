@@ -25,7 +25,7 @@ namespace RPGGame
 
         public static void MoveLeft(FoxDraw foxDraw)
         {
-            if (XCoord > 50 && XCoord < 500)
+            if (XCoord > 50)
             {
                 XCoord -= 50;
             }
@@ -33,7 +33,7 @@ namespace RPGGame
         }
         public static void MoveRight(FoxDraw foxDraw)
         {
-        //    if (XCoord > 50 && XCoord < 500)
+            if (XCoord < 500)
             {
                 XCoord += 50;
             }
@@ -41,7 +41,7 @@ namespace RPGGame
         }
         public static void MoveUp(FoxDraw foxDraw)
         {
-           // if (YCoord > 50 && YCoord < 500)
+            if (YCoord > 50)
             {
                 YCoord -= 50;
             }
@@ -49,7 +49,7 @@ namespace RPGGame
         }
         public static void MoveDown(FoxDraw foxDraw)
         {
-         //   if (YCoord > 50 && YCoord < 500)
+            if (YCoord < 500)
             {
                 YCoord += 50;
             }
